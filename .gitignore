@@ -1,0 +1,106 @@
+# =============================
+# Kotlin Multiplatform Project
+# Android + iOS + Firebase
+# =============================
+
+# === Kotlin/Gradle ===
+.gradle/
+build/
+*.iml
+*.lock
+*.log
+*.class
+*.jar
+*.war
+*.ear
+*.swp
+*.tmp
+*.hprof
+
+# === Kotlin Multiplatform (KMM) Specific ===
+*.kexe
+*.klib
+*.konan/
+*.dSYM/
+*.dSYM.zip
+*.cinterop/
+*.module-cache/
+*.def
+*.db
+*.db-journal
+
+# === Compose ===
+.cxx/
+*.apk
+*.ap_
+*.dex
+*.so
+*.keystore
+*.jks
+local.properties
+
+# === Jetpack Compose UI Tooling & Preview Cache
+compose-resources/build/
+composeCompiler/build/
+.ui-tooling/
+
+# === SQLDelight ===
+sqldelight.db/
+**/sqldelight/databases/**/*.db
+**/sqldelight/databases/**/*.db-journal
+
+# === KSP (Kotlin Symbol Processing) ===
+.ksp/
+**/build/generated/ksp/
+
+# === Firebase ===
+.firebase/
+firebase.json
+*.env
+google-services.json
+GoogleService-Info.plist
+.crashlytics/
+
+# === iOS / Xcode ===
+*.xcworkspace
+*.xcuserstate
+*.xcuserdata/
+*.hmap
+*.ipa
+*.dSYM
+*.dSYM.zip
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
+*.xcscmblueprint
+*.xcsettings
+*.xcodeproj/project.xcworkspace/
+Pods/
+DerivedData/
+*.plist
+.spm/
+.symlinks/
+
+# === Hilt (Generated code) ===
+build/generated/source/kapt/
+build/generated/ksp/
+
+# === Ktor / Serialization ===
+*.json.cache/
+
+# === IDEs (IntelliJ / Android Studio / Xcode / VS Code) ===
+.idea/
+*.iws
+*.ipr
+.vscode/
+*.xcuserstate
+
+# === Misc ===
+.DS_Store
+*.orig
+*~
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+node_modules/
