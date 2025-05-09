@@ -4,6 +4,8 @@ import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
     alias(libs.plugins.androidLibrary)
+    alias(libs.plugins.sqldelight)
+    alias(libs.plugins.kotlin.serialization)
 }
 
 kotlin {
@@ -59,10 +61,15 @@ android {
         minSdk = 28
     }
     compileOptions {
-        sourceCompatibility = JavaVersion.VERSION_1_8 // TODO: It was 1_8
+        sourceCompatibility = JavaVersion.VERSION_1_8
         targetCompatibility = JavaVersion.VERSION_1_8
     }
 }
 
-// TODO: sqldelight config changed in the "Migration to version catalogs" video.
-
+sqldelight {
+    databases {
+        create("TranslateDatabase") {
+            packageName.set("com.prekogdevs.translator.database")
+        }
+    }
+}

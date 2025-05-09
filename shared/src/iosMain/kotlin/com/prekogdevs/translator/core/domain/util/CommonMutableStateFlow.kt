@@ -8,31 +8,31 @@ import kotlinx.coroutines.flow.StateFlow
 
 actual open class CommonMutableStateFlow<T> actual constructor(
     private val flow: MutableStateFlow<T>
-): CommonStateFlow<T>(flow), MutableStateFlow<T> {
+) : CommonStateFlow<T>(flow), MutableStateFlow<T> {
 
-    override var value: T
+    actual override var value: T
         get() = super.value
         set(value) {
             flow.value = value
         }
 
-    override val subscriptionCount: StateFlow<Int>
+    actual override val subscriptionCount: StateFlow<Int>
         get() = flow.subscriptionCount
 
-    override fun compareAndSet(expect: T, update: T): Boolean {
+    actual override fun compareAndSet(expect: T, update: T): Boolean {
         return flow.compareAndSet(expect, update)
     }
 
     @ExperimentalCoroutinesApi
-    override fun resetReplayCache() {
+    actual override fun resetReplayCache() {
         flow.resetReplayCache()
     }
 
-    override fun tryEmit(value: T): Boolean {
+    actual override fun tryEmit(value: T): Boolean {
         return flow.tryEmit(value)
     }
 
-    override suspend fun emit(value: T) {
+    actual override suspend fun emit(value: T) {
         flow.emit(value)
     }
 }
