@@ -22,6 +22,7 @@
 		2C8879A92DDC9D85006F162F /* ProgressButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8879A82DDC9D85006F162F /* ProgressButton.swift */; };
 		2C8879AB2DDC9DB5006F162F /* TranslateTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8879AA2DDC9DB5006F162F /* TranslateTextField.swift */; };
 		2C8879AD2DDCA490006F162F /* TextToSpeech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8879AC2DDCA490006F162F /* TextToSpeech.swift */; };
+		2C8879AF2DDCA69E006F162F /* TranslateHistoryItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8879AE2DDCA69E006F162F /* TranslateHistoryItem.swift */; };
 		7555FF83242A565900829871 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +55,7 @@
 		2C8879A82DDC9D85006F162F /* ProgressButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressButton.swift; sourceTree = "<group>"; };
 		2C8879AA2DDC9DB5006F162F /* TranslateTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateTextField.swift; sourceTree = "<group>"; };
 		2C8879AC2DDCA490006F162F /* TextToSpeech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextToSpeech.swift; sourceTree = "<group>"; };
+		2C8879AE2DDCA69E006F162F /* TranslateHistoryItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslateHistoryItem.swift; sourceTree = "<group>"; };
 		7555FF7B242A565900829871 /* iosApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iosApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7555FF82242A565900829871 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		7555FF8C242A565B00829871 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -108,6 +110,7 @@
 				2C8879A62DDC9D5C006F162F /* LanguageDisplay.swift */,
 				2C8879A82DDC9D85006F162F /* ProgressButton.swift */,
 				2C8879AA2DDC9DB5006F162F /* TranslateTextField.swift */,
+				2C8879AE2DDCA69E006F162F /* TranslateHistoryItem.swift */,
 			);
 			path = components;
 			sourceTree = "<group>";
@@ -271,6 +274,7 @@
 				2C221DC72DD7CC1B008447DB /* TranslateScreen.swift in Sources */,
 				2C8879AD2DDCA490006F162F /* TextToSpeech.swift in Sources */,
 				2C221DC22DD7B54D008447DB /* LanguageDropDownItem.swift in Sources */,
+				2C8879AF2DDCA69E006F162F /* TranslateHistoryItem.swift in Sources */,
 				2C8879AB2DDC9DB5006F162F /* TranslateTextField.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
