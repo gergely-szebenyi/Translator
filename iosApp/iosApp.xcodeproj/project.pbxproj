@@ -18,6 +18,7 @@
 		2C221DC92DD7CC58008447DB /* IOSTranslateViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C221DC82DD7CC58008447DB /* IOSTranslateViewModel.swift */; };
 		2C52AD3F2DDE607800E1F10B /* IOSVoiceToTextParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52AD3E2DDE607800E1F10B /* IOSVoiceToTextParser.swift */; };
 		2C52AD422DDE60A900E1F10B /* MicrophonePhoneObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52AD412DDE60A900E1F10B /* MicrophonePhoneObserver.swift */; };
+		2C52AD452DDE631700E1F10B /* IOSVoiceToTextViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C52AD442DDE631700E1F10B /* IOSVoiceToTextViewModel.swift */; };
 		2C6D17172DD63F5700EB0E94 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C6D17162DD63F5700EB0E94 /* Colors.swift */; };
 		2C8879A52DDC9C0D006F162F /* GradientSurface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8879A42DDC9C0D006F162F /* GradientSurface.swift */; };
 		2C8879A72DDC9D5C006F162F /* LanguageDisplay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8879A62DDC9D5C006F162F /* LanguageDisplay.swift */; };
@@ -53,6 +54,7 @@
 		2C221DC82DD7CC58008447DB /* IOSTranslateViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSTranslateViewModel.swift; sourceTree = "<group>"; };
 		2C52AD3E2DDE607800E1F10B /* IOSVoiceToTextParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSVoiceToTextParser.swift; sourceTree = "<group>"; };
 		2C52AD412DDE60A900E1F10B /* MicrophonePhoneObserver.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicrophonePhoneObserver.swift; sourceTree = "<group>"; };
+		2C52AD442DDE631700E1F10B /* IOSVoiceToTextViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IOSVoiceToTextViewModel.swift; sourceTree = "<group>"; };
 		2C6D17162DD63F5700EB0E94 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		2C8879A42DDC9C0D006F162F /* GradientSurface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientSurface.swift; sourceTree = "<group>"; };
 		2C8879A62DDC9D5C006F162F /* LanguageDisplay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LanguageDisplay.swift; sourceTree = "<group>"; };
@@ -122,6 +124,7 @@
 		2C52AD3D2DDE606200E1F10B /* voice_to_text */ = {
 			isa = PBXGroup;
 			children = (
+				2C52AD432DDE630700E1F10B /* presentation */,
 				2C52AD402DDE609800E1F10B /* data */,
 				2C52AD3E2DDE607800E1F10B /* IOSVoiceToTextParser.swift */,
 			);
@@ -134,6 +137,14 @@
 				2C52AD412DDE60A900E1F10B /* MicrophonePhoneObserver.swift */,
 			);
 			path = data;
+			sourceTree = "<group>";
+		};
+		2C52AD432DDE630700E1F10B /* presentation */ = {
+			isa = PBXGroup;
+			children = (
+				2C52AD442DDE631700E1F10B /* IOSVoiceToTextViewModel.swift */,
+			);
+			path = presentation;
 			sourceTree = "<group>";
 		};
 		2C6D17122DD63F2500EB0E94 /* core */ = {
@@ -284,6 +295,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C8879A92DDC9D85006F162F /* ProgressButton.swift in Sources */,
+				2C52AD452DDE631700E1F10B /* IOSVoiceToTextViewModel.swift in Sources */,
 				2C221DC92DD7CC58008447DB /* IOSTranslateViewModel.swift in Sources */,
 				2C8879A52DDC9C0D006F162F /* GradientSurface.swift in Sources */,
 				2C221DBE2DD7AEA1008447DB /* SmallLanguageIcon.swift in Sources */,
