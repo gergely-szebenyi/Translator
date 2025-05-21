@@ -7,8 +7,8 @@ import android.speech.RecognitionListener
 import android.speech.RecognizerIntent
 import android.speech.SpeechRecognizer
 import com.prekogdevs.translator.android.R
-import com.prekogdevs.translator.android.voice_to_text.domain.VoiceToTextParser
-import com.prekogdevs.translator.android.voice_to_text.domain.VoiceToTextParserState
+import com.prekogdevs.translator.voice_to_text.domain.VoiceToTextParser
+import com.prekogdevs.translator.voice_to_text.domain.VoiceToTextParserState
 import com.prekogdevs.translator.core.domain.util.CommonMutableStateFlow
 import com.prekogdevs.translator.core.domain.util.CommonStateFlow
 import com.prekogdevs.translator.core.domain.util.toCommonStateFlow

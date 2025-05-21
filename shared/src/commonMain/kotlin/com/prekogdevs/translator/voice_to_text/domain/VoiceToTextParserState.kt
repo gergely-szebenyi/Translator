@@ -1,4 +1,4 @@
-package com.prekogdevs.translator.android.voice_to_text.domain
+package com.prekogdevs.translator.voice_to_text.domain
 
 data class VoiceToTextParserState(
     val result: String = "",

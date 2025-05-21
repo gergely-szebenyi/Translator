@@ -1,4 +1,4 @@
-package com.prekogdevs.translator.android.voice_to_text.domain
+package com.prekogdevs.translator.voice_to_text.domain
 
 import com.prekogdevs.translator.core.domain.util.CommonStateFlow
 

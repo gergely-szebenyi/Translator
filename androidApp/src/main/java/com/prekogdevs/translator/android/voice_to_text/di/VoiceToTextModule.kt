@@ -2,7 +2,7 @@ package com.prekogdevs.translator.android.voice_to_text.di
 
 import android.app.Application
 import com.prekogdevs.translator.android.voice_to_text.data.AndroidVoiceToTextParser
-import com.prekogdevs.translator.android.voice_to_text.domain.VoiceToTextParser
+import com.prekogdevs.translator.voice_to_text.domain.VoiceToTextParser
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
