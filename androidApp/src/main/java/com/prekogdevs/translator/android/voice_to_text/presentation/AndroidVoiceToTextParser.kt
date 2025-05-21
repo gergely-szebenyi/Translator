@@ -1,5 +1,6 @@
 package com.prekogdevs.translator.android.voice_to_text.presentation
 
+import android.speech.SpeechRecognizer.ERROR_CLIENT
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.prekogdevs.translator.voice_to_text.domain.VoiceToTextParser
@@ -10,7 +11,7 @@ import javax.inject.Inject
 
 
 @HiltViewModel
-class AndroidVoiceToTextParser @Inject constructor(
+class AndroidVoiceToTextViewModel @Inject constructor(
     private val parser: VoiceToTextParser
 ): ViewModel() {
 
