@@ -13,11 +13,12 @@ struct TranslateScreen: View {
 	private var historyDataSource: HistoryDataSource
 	private var translateUseCase: TranslateUseCase
 	@ObservedObject var viewModel: IOSTranslateViewModel
-	private let parser = IOSVoiceToTextParser()
+	private let parser: any VoiceToTextParser
 	
-	init(historyDataSource: HistoryDataSource, translateUseCase: TranslateUseCase) {
+	init(historyDataSource: HistoryDataSource, translateUseCase: TranslateUseCase, parser: VoiceToTextParser) {
 		self.historyDataSource = historyDataSource
 		self.translateUseCase = translateUseCase
+		self.parser = parser
 		self.viewModel = IOSTranslateViewModel(historyDataSource: historyDataSource, translateUseCase: translateUseCase)
 	}
 	
@@ -49,17 +50,17 @@ struct TranslateScreen: View {
 				.listRowBackground(Color.background)
 				
 				TranslateTextField(
-									fromText: Binding(get: { viewModel.state.fromText }, set: { value in
-										viewModel.onEvent(event: TranslateEvent.ChangeTranslationText(text: value))
-									}),
-									toText: viewModel.state.toText,
-									isTranslating: viewModel.state.isTranslating,
-									fromLanguage: viewModel.state.fromLanguage,
-									toLanguage: viewModel.state.toLanguage,
-									onTranslateEvent: { viewModel.onEvent(event: $0) }
-								)
-								.listRowSeparator(.hidden)
-								.listRowBackground(Color.background)
+					fromText: Binding(get: { viewModel.state.fromText }, set: { value in
+						viewModel.onEvent(event: TranslateEvent.ChangeTranslationText(text: value))
+					}),
+					toText: viewModel.state.toText,
+					isTranslating: viewModel.state.isTranslating,
+					fromLanguage: viewModel.state.fromLanguage,
+					toLanguage: viewModel.state.toLanguage,
+					onTranslateEvent: { viewModel.onEvent(event: $0) }
+				)
+				.listRowSeparator(.hidden)
+				.listRowBackground(Color.background)
 				
 				if !viewModel.state.history.isEmpty {
 					Text("History")
@@ -85,20 +86,21 @@ struct TranslateScreen: View {
 			VStack {
 				Spacer()
 				NavigationLink(
-						destination: VoiceToTextScreen(
-							onResult: { spokenText in
-								viewModel.onEvent(event: TranslateEvent.SubmitVoiceResult(result: spokenText))
-							},
-							parser: parser,
-							languageCode: viewModel.state.fromLanguage.language.langCode
-						)
-					) {
+					destination: VoiceToTextScreen(
+						onResult: { spokenText in
+							viewModel.onEvent(event: TranslateEvent.SubmitVoiceResult(result: spokenText))
+						},
+						parser: parser,
+						languageCode: viewModel.state.fromLanguage.language.langCode
+					)
+				) {
 					ZStack {
 						Circle()
 							.foregroundColor(.primaryColor)
 							.padding()
 						Image(uiImage: UIImage(named: "mic")!)
 							.foregroundColor(.onPrimary)
+							.accessibilityIdentifier("Record audio")
 					}
 					.frame(maxWidth: 100, maxHeight: 100)
 				}
