@@ -16,6 +16,7 @@ android {
         targetSdk = 35
         versionCode = 1
         versionName = "1.0"
+        testInstrumentationRunner = "com.prekogdevs.translator.TestHiltRunner"
     }
     buildFeatures {
         compose = true
